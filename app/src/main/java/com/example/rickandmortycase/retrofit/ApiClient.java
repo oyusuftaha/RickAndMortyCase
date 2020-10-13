@@ -7,10 +7,11 @@ import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
 public class ApiClient {
-    private static Retrofit retrofit=null;
-    private static String Base_Url= "https://rickandmortyapi.com/api/";
-    public static Retrofit getClient(){
-        if(retrofit== null){
+    private static Retrofit retrofit = null;
+    private static String Base_Url = "https://rickandmortyapi.com/api/";
+
+    public static Retrofit getClient() {
+        if (retrofit == null) {
 
             OkHttpClient okHttpClient = new OkHttpClient().newBuilder()
                     .connectTimeout(15, TimeUnit.SECONDS)

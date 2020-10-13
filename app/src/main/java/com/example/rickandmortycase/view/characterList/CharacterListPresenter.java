@@ -10,6 +10,8 @@ public class CharacterListPresenter implements CharacterListContract.Presenter, 
     public CharacterListPresenter(CharacterListContract.View characterListView) {
         this.characterListView = characterListView;
         characterListModel = new CharacterListModel();
+
+        this.characterListView.setupUI();
     }
 
     @Override
@@ -24,7 +26,9 @@ public class CharacterListPresenter implements CharacterListContract.Presenter, 
     @Override
     public void onFinished(CharacterResponse characterResponse) {
 
-        characterListView.fillContent(characterResponse.getCharacters());
+        if (characterResponse!=null){
+            characterListView.fillCharacterData(characterResponse.getCharacters());
+        }
         if (characterListView != null) {
             characterListView.hideProgress();
         }

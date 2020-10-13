@@ -22,13 +22,16 @@ public interface CharacterListContract {
 
         void showProgress();
         void hideProgress();
-        void fillContent(List<Character> characterList);
+
+        void fillCharacterData(List<Character> data);
         void onResponseFailure(Throwable throwable);
+
+        void setupUI();
     }
 
     interface Presenter {
 
+        void getDataByPage(int pageNumber);
         void onDestroy();
-        void getDataByPage(int pageNo);
     }
 }
