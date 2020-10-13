@@ -19,7 +19,7 @@ public class CharacterListActivity extends AppCompatActivity implements Characte
         setContentView(R.layout.ac_character_list);
 
         presenter = new CharacterListPresenter(this);
-        presenter.getDataByPage(1);
+        presenter.getDataByPage(pageNumber);
     }
 
     @Override
