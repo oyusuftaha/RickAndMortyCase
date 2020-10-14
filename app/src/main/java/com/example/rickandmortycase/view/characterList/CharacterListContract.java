@@ -12,6 +12,7 @@ public interface CharacterListContract {
 
         interface OnFinishedListener {
             void onFinished(CharacterResponse characterResponse);
+
             void onFailure(Throwable t);
         }
 
@@ -21,9 +22,11 @@ public interface CharacterListContract {
     interface View {
 
         void showProgress();
+
         void hideProgress();
 
         void fillCharacterData(List<Character> data);
+
         void onResponseFailure(Throwable throwable);
 
         void setupUI();
@@ -32,6 +35,7 @@ public interface CharacterListContract {
     interface Presenter {
 
         void getDataByPage(int pageNumber);
+
         void onDestroy();
     }
 }

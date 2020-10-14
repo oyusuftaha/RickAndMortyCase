@@ -3,7 +3,9 @@ package com.example.rickandmortycase.model;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
-public class Origin {
+import java.io.Serializable;
+
+public class Origin implements Serializable {
 
     @SerializedName("name")
     @Expose

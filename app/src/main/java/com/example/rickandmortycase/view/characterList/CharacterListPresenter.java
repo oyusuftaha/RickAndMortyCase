@@ -26,7 +26,7 @@ public class CharacterListPresenter implements CharacterListContract.Presenter, 
     @Override
     public void onFinished(CharacterResponse characterResponse) {
 
-        if (characterResponse!=null){
+        if (characterResponse != null) {
             characterListView.fillCharacterData(characterResponse.getCharacters());
         }
         if (characterListView != null) {

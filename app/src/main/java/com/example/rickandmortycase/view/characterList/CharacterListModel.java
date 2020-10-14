@@ -8,7 +8,7 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-public class CharacterListModel implements CharacterListContract.Model{
+public class CharacterListModel implements CharacterListContract.Model {
     @Override
     public void getCharacterList(final OnFinishedListener onFinishedListener, int pageNo) {
 

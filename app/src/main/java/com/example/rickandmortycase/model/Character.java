@@ -1,10 +1,14 @@
 package com.example.rickandmortycase.model;
 
+import android.os.Parcelable;
+
+import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.List;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
-public class Character {
+public class Character implements Serializable {
 
     @SerializedName("id")
     @Expose
@@ -137,6 +141,16 @@ public class Character {
 
     public void setCreated(String created) {
         this.created = created;
+    }
+
+
+    public List<Integer> getEpisodeNumbers(){
+        List<Integer> episodeNumbers = new ArrayList<>();
+        for ( String episode : getEpisode()) {
+            String numberStr = episode.substring(episode.lastIndexOf("/")+1);
+            episodeNumbers.add(Integer.valueOf(numberStr));
+        }
+        return episodeNumbers;
     }
 
 }

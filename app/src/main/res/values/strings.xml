@@ -1,3 +1,9 @@
 <resources>
-    <string name="app_name">Rick and Morty Case</string>
+    <string name="app_name">Rick and Morty</string>
+
+    <string name="app_bar_main_title">Characters</string>
+    <string name="last_known_location">Last Known Location</string>
+    <string name="episodes">Episodes</string>
+    <string name="episode">Episode</string>
+
 </resources>
